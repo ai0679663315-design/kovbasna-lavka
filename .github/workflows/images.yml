@@ -1,0 +1,28 @@
+name: sync-product-photos
+on:
+  push:
+    branches: [main]
+    paths: ["products.js", "scripts/fetch_images.py", ".github/workflows/images.yml"]
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * 1"   # weekly refresh
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - run: python scripts/fetch_images.py
+      - name: Commit photos
+        run: |
+          git config user.name "lavka-bot"
+          git config user.email "lavka-bot@users.noreply.github.com"
+          git add img
+          git commit -m "Sync product photos from Telegram" || echo "no changes"
+          git push
