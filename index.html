@@ -179,6 +179,7 @@ input,textarea{font:15px Inter;padding:11px 12px;border:1px solid var(--line);bo
 
 <script src="products.js"></script>
 <script src="img/manifest.js" onerror="window.LOCAL_IMG={}"></script>
+<script src="img-ai/approved.js" onerror="window.AI_IMG={}"></script>
 <script>
 // ---------------- налаштування ----------------
 const MARKUP = 0;                     // націнка магазину: 0 = ціни виробника, 0.1 = +10%
@@ -200,7 +201,8 @@ function wRange(s){ // "500–700 г" / "0,4–0,5 кг" / "1 кг (кільце
 P.forEach(p => { p.wr = wRange(p.w); p.avg = p.wr ? (p.wr[0]+p.wr[1])/2 : null; });
 const perPiece = p => p.avg ? Math.round(p.avg * price(p)) : null;
 const LOCAL = window.LOCAL_IMG || {};   // img/manifest.js — локальні копії фото (створює GitHub Actions)
-const srcOf = p => LOCAL[p.id] ? `img/${p.id}.jpg` : p.photo;
+const AI = window.AI_IMG || {};     // img-ai/approved.js — фото після обробки GPT (перевірені)
+const srcOf = p => AI[p.id] ? `img-ai/${p.id}.jpg` : LOCAL[p.id] ? `img/${p.id}.jpg` : p.photo;
 const imgTag = p => p.photo ? `<img src="${esc(srcOf(p))}" data-remote="${esc(p.photo)}" alt="${esc(p.name)}" loading="lazy" onerror="imgFallback(this)">` : "";
 function imgFallback(el){
   const r = el.dataset.remote;

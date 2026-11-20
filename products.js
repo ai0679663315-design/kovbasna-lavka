@@ -72,7 +72,7 @@ window.PRODUCTS_RAW = [
 ["shashlyk-svyn","Для гриля","Шашлик готовий свинний",340,"0,5 кг",282,"u_ty6utYvea45ThIISMxvg7HTwFRthyUPOzrHXTuhBfykOKG-EWgOYvoRM7HXioDC7v1a3QE5Z3H2wU9LIbP_AiWqWFq_24bsM7f61K5uSkuLEZgAi3Bn95Am3A6Jr_gC9Ak2hxwY6E8pKqaPW4J8gzb8K67mQenpWDN8Y_yukgBdBiHrGuDtvJ2LLC1t5wCpm8_44vsdhd4nIS1Ada58B9QsyIQmHVTdpMncXKaZfaXtGCv8AblpTABMcKzkFy9iLYATX0q2cwAH1lmk4fesHg2Dr4vZbHl5r0uIYiaPgp72K8kSJY99baUrpgpclzpY_aCvxRp3OOGon4VYSA_UA",282],
 ["shashlyk-indyk","Для гриля","Шашлик готовий з індички",300,"0,5 кг",280,"udugVpe1ek8Os3mJufC8uYIG6qvXCvfWwywbFEpHaYlwDzpO8pzaAgMoxQo8TB8Vcrc0afVD0wSMVt4-IQFt9fFjbqzBFRWgSMkrlbF9tTOxiz9LOOWf_QjXP8sOAytmloeLpKw7ySzQGToPRc9VgmQXIHmfYEJcbrzC5n3G67ekv7MEUXkk1_fYclovkaGHNBQHRM2k_9Vh44neQt26PSzRx4NqnF-0icXtI60C8gr4UK0YReIIBUENr5vtyVZxABjqJnucwJTTzSTt4q-zzatsKeScLLjHksG8HAxHUkMyuMrhLZk-FZkXfsK7Ycf2EFPxAAH7MFJ0yp0H5ZO_7A",280],
 ["bedro-bbq","Для гриля","Стегно барбекю (мариноване)",180,"0,8–0,9 кг",395,"",0],
-["homilka-bbq","Для гриля","Гомілка барбекю, готова до вживання",175,"0,5–0,6 кг",399,"n3HaB3ppnGEDUf8sdy3s4iYW3zTR79z9H4L0nnhkGs1gTPJimXZsgnZVk1KvMoiAWydk8szpjR_Z1cRLF9ErZnWGlQVAN9Jl68aPknnzzJzPCQu1Gjf9A9I8Qz1_bM0i2GPhjdn_jjM3-2xfUja5kEyJxe9L7XLy-s01gy-cGvdXB0_3rJK_geGZujlSd_1KApT6sEUmCAqK1zCzZ54A6Qx8Mnk0aKRDxHTdtLE2OAl2PTTdXMuHyQJWNE_GmPmd6Y8wDqWZgLVi8RqYpE4xEEXaL_6lg9wivQm2W1h2bjpA5NiS5EsXemBRc1gI3A_3yuB8uwIsHM7OOJc0fNDAaA",399],
+["homilka-bbq","Для гриля","Гомілка барбекю, готова до вживання",175,"0,5–0,6 кг",399,"",0],
 ];
 window.PRODUCTS = window.PRODUCTS_RAW.map(([id,cat,name,price,w,src,photo,photoPost]) => ({
   id, cat, name, price, w, src,
